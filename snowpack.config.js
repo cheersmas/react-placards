@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
-    '@snowpack/plugin-typescript',
+    '@snowpack/plugin-typescript'
   ],
   routes: [
     {"match": "routes", "src": ".*", "dest": "/index.html"},
@@ -19,7 +19,7 @@ module.exports = {
   packageOptions: {
   },
   devOptions: {
-    /* ... */
+    port: 3000
   },
   buildOptions: {
     /* ... */
