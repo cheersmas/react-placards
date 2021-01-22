@@ -2,26 +2,23 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/dist' },
+    src: { url: '/dist' }
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript'
   ],
-  routes: [
-    {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
   optimize: {
     /* Example: Bundle your final build: */
     // "bundle": true,
   },
-  packageOptions: {
-  },
+  packageOptions: {},
   devOptions: {
     port: 3000
   },
   buildOptions: {
     /* ... */
-  },
+  }
 };

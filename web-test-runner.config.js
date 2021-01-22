@@ -2,5 +2,6 @@
 process.env.NODE_ENV = 'test';
 
 module.exports = {
-  plugins: [require('@snowpack/web-test-runner-plugin')()],
+  // TODO: fix this in eslint configuration
+  plugins: [require('@snowpack/web-test-runner-plugin')()] // eslint-disable-line
 };

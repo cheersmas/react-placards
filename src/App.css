@@ -1,11 +1,13 @@
 .App {
   text-align: center;
 }
+
 .App code {
-  background: #FFF3;
-  padding: 4px 8px;
+  background: #fff3;
   border-radius: 4px;
+  padding: 4px 8px;
 }
+
 .App p {
   margin: 0.4rem;
 }
@@ -22,14 +24,14 @@
 }
 
 .App-header {
+  align-items: center;
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .App-link {
@@ -40,6 +42,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
