@@ -45,9 +45,10 @@
     ],
     "@typescript-eslint/no-use-before-define": ["error"],
     "import/extensions": [
-      1,
+      "error",
+      "never",
       {
-        "tsx": "never"
+        "json": "always"
       }
     ],
     "import/no-extraneous-dependencies": [
