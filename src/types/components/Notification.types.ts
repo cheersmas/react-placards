@@ -1,4 +1,8 @@
+export type Item = {
+  id: string;
+  text: string;
+};
 export type ReactNotificationType = {
-  name?: string;
+  items?: Item[];
   children?: React.ReactElement | React.ReactElement[];
 };

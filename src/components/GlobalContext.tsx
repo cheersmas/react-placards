@@ -5,9 +5,7 @@ import type { ReactNotificationType } from '../types/components/Notification.typ
 
 // - TODO - decide to use one of (1) or (2)
 // (1). use in hooks
-export const GlobalContext = createContext<ReactNotificationType>({
-  name: 'one'
-});
+export const GlobalContext = createContext<ReactNotificationType>({});
 
 const GlobalContextProvider: FC<ReactNotificationType> = ({
   children,
