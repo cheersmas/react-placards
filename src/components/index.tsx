@@ -1,13 +1,16 @@
 import type { ReactElement } from 'react';
 import React from 'react';
 
+import GlobalContextProvider from './GlobalContext';
 import GlobalStyledWrapper from './GlobalStyledWrapper';
 
 function ReactNotification(): ReactElement {
   return (
-    <GlobalStyledWrapper>
-      <div>Hello World</div>
-    </GlobalStyledWrapper>
+    <GlobalContextProvider name="test">
+      <GlobalStyledWrapper>
+        <div>Hello World</div>
+      </GlobalStyledWrapper>
+    </GlobalContextProvider>
   );
 }
 

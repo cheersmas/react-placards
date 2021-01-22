@@ -4,6 +4,6 @@ export type Theme = {
   };
 };
 
-export type StyledComponentProps = {
+export type GlobalStyledWrapperProps = {
   theme?: Theme;
 };
