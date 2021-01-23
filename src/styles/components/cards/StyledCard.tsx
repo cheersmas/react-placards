@@ -1,15 +1,13 @@
 import styled, { css } from 'styled-components';
 
-const StyledCard = styled.li<{ array: number[] }>`
-  ${({ array }) => css`
+const StyledCard = styled.li<{ rotatingIndicies: number[] }>`
+  ${({ rotatingIndicies }) => css`
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-
-    /* transition: all 1s cubic-bezier(0.19, 0.49, 0.46, 0.96) 100ms; */
     width: 320px;
 
-    &:nth-child(${array[4] + 1}) {
+    &:nth-child(${rotatingIndicies[4] + 1}) {
       filter: blur(10px);
       opacity: 0;
       position: absolute;
@@ -18,7 +16,7 @@ const StyledCard = styled.li<{ array: number[] }>`
       z-index: 5;
     }
 
-    &:nth-child(${array[3] + 1}) {
+    &:nth-child(${rotatingIndicies[0] + 1}) {
       box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
         0 5px 15px rgba(0, 0, 0, 0.07);
       position: absolute;
@@ -27,7 +25,7 @@ const StyledCard = styled.li<{ array: number[] }>`
       z-index: 4;
     }
 
-    &:nth-child(${array[2] + 1}) {
+    &:nth-child(${rotatingIndicies[1] + 1}) {
       background: #e2e7ed;
       color: #e2e7ed;
       position: absolute;
@@ -36,7 +34,7 @@ const StyledCard = styled.li<{ array: number[] }>`
       z-index: 3;
     }
 
-    &:nth-child(${array[1] + 1}) {
+    &:nth-child(${rotatingIndicies[2] + 1}) {
       background-color: #fafafa;
       color: #e2e7ed;
       position: absolute;
@@ -45,7 +43,7 @@ const StyledCard = styled.li<{ array: number[] }>`
       z-index: 2;
     }
 
-    &:nth-child(${array[0] + 1}) {
+    &:nth-child(${rotatingIndicies[3] + 1}) {
       opacity: 0;
       position: absolute;
       transform: perspective(700px) translate3d(0, 60%, -150px);
