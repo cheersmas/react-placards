@@ -2,43 +2,54 @@ import styled, { css } from 'styled-components';
 
 const StyledCard = styled.li<{ array: number[] }>`
   ${({ array }) => css`
-    background-color: #eee8aa;
+    background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-    transition: all 100ms linear;
+
+    /* transition: all 1s cubic-bezier(0.19, 0.49, 0.46, 0.96) 100ms; */
     width: 320px;
 
     &:nth-child(${array[4] + 1}) {
+      filter: blur(10px);
       opacity: 0;
       position: absolute;
       transform: perspective(700px) translate3d(0, -90%, 300px);
+      transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96);
       z-index: 5;
     }
 
     &:nth-child(${array[3] + 1}) {
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.07);
       position: absolute;
       transform: perspective(0) translate3d(0, 0, 0);
+      transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96);
       z-index: 4;
     }
 
     &:nth-child(${array[2] + 1}) {
+      background: #e2e7ed;
+      color: #e2e7ed;
       position: absolute;
       transform: perspective(700px) translate3d(0, 20%, -50px);
-      transition-delay: 150ms;
+      transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96) 150ms;
       z-index: 3;
     }
 
     &:nth-child(${array[1] + 1}) {
+      background-color: #fafafa;
+      color: #e2e7ed;
       position: absolute;
       transform: perspective(700px) translate3d(0, 40%, -100px);
-      transition-delay: 100ms;
+      transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96) 250ms;
       z-index: 2;
     }
 
     &:nth-child(${array[0] + 1}) {
       opacity: 0;
       position: absolute;
-      transform: perspective(700px) translate3d(0, 80%, -150px);
+      transform: perspective(700px) translate3d(0, 60%, -150px);
+      transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96);
       z-index: 1;
     }
   `}

@@ -8,7 +8,7 @@ import Card from './Card';
 
 const Cards: FC = () => {
   const { items } = useContext(GlobalContext);
-  const array = useRotatingArray(5, 2000);
+  const array = useRotatingArray(5, 5000);
   return (
     <StyledCardContainer>
       {items?.map((item) => (
