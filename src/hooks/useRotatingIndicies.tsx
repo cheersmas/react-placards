@@ -2,8 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 
 import calculateRotatingIndicies from '../utils/helpers';
 
-export const useRotatingIndicies = (size = 5, duration = 1000): number[] => {
-  const [counter, setCounter] = useState<number>(size);
+export const useRotatingIndicies = (
+  size = 5,
+  duration = 5000
+): [number, number[]] => {
+  const [counter, setCounter] = useState<number>(0);
   const memoizedRotatingIndicies = useCallback(
     (c, s) => calculateRotatingIndicies(c, s),
     [counter]
@@ -20,7 +23,7 @@ export const useRotatingIndicies = (size = 5, duration = 1000): number[] => {
       clearInterval(timer);
     };
   });
-  return memoizedRotatingIndicies(counter, size);
+  return [counter, memoizedRotatingIndicies(counter, size)];
 };
 
 export default useRotatingIndicies;

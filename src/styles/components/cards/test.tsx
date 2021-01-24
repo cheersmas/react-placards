@@ -4,7 +4,7 @@ const StyledCard = styled.li<{
   offsetHeight?: number;
   rotatingIndicies: number[];
 }>`
-  ${({ rotatingIndicies }) => css`
+  ${({ rotatingIndicies, offsetHeight }) => css`
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -35,7 +35,7 @@ const StyledCard = styled.li<{
     }
     &:nth-child(${rotatingIndicies[2] + 1}) {
       background-color: #fafafa;
-      color: #fafafa;
+      color: #e2e7ed;
       position: absolute;
       transform: perspective(700px) translate3d(0, 40%, -100px);
       transition: all 1000ms cubic-bezier(0.19, 0.49, 0.46, 0.96) 250ms;

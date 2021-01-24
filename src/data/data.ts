@@ -4,27 +4,27 @@ const items: Item[] = [
   {
     id: 'one',
     text:
-      'ONE this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
+      'ONE this should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
   },
   {
     id: 'two',
     text:
-      'TWO this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
+      'TWO this sh,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
   },
   {
     id: 'three',
     text:
-      'THREE this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
+      'THREE his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.his should be rendered,oeuaoeuaoeu,.u,.this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
   },
   {
     id: 'four',
     text:
-      'FOUR this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
+      'FOUeua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
   },
   {
     id: 'five',
     text:
-      'FIVE this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
+      'FIVhis should be rendered,oeuaoeuaoeu,.u,.E this should be rendered,oeuaoeuaoeu,.u,.u,.uot.tuhso uaoseu aoe uao eua oeusaoeuaoeua oeua oeu aoeu aoeuaoeuaoeu, uoe uao eua oeu aoeu ao eua oeu aoeu aoesuta,.unthaosecuharocehuaoceu aoetua oeu aoeuao euaoesuaaoesu aoeur'
   }
 ];
 
