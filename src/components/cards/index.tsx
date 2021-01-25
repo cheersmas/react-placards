@@ -9,20 +9,24 @@ import Card from './Card';
 
 const Cards: FC = () => {
   const { items } = useContext(GlobalContext);
-  const [current, rotatingIndicies] = useIndicies();
+  const [current, updateCounter, rotatingIndicies] = useIndicies();
   const [cardRefs, measurements] = useRefsMeasurements<HTMLLIElement>(5);
   return (
-    <StyledCardContainer>
-      {items?.map((item, index) => (
-        <Card
-          current={index}
-          cardRef={cardRefs[index]}
-          item={item}
-          key={item.id}
-          rotatingIndicies={rotatingIndicies}
-        />
-      ))}
-    </StyledCardContainer>
+    <>
+      <StyledCardContainer>
+        {items?.map((item, index) => (
+          <Card
+            current={current}
+            cardRef={cardRefs[index]}
+            offsetheight={measurements[current]?.offsetHeight}
+            heights={measurements.map((i) => i.offsetHeight)}
+            item={item}
+            key={item.id}
+            rotatingIndicies={rotatingIndicies}
+          />
+        ))}
+      </StyledCardContainer>
+    </>
   );
 };
 

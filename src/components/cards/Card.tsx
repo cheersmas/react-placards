@@ -1,4 +1,4 @@
-import type { FC, Ref, RefObject } from 'react';
+import type { FC, RefObject } from 'react';
 import React from 'react';
 
 import StyledCard from '../../styles/components/cards/StyledCard';
@@ -8,15 +8,24 @@ const Card: FC<{
   current: number;
   rotatingIndicies: number[];
   item: Item;
+  offsetheight: number;
+  heights: number[];
   cardRef: RefObject<HTMLLIElement>;
-}> = ({ current, item: { id, text }, rotatingIndicies, cardRef }) => (
+}> = ({
+  cardRef,
+  current,
+  item: { id, text },
+  offsetheight,
+  rotatingIndicies,
+  heights
+}) => (
   <StyledCard
-    data-index={current}
     data-rotating-index={rotatingIndicies[current]}
     id={id}
     ref={cardRef}
-    // rotatingIndicies={[3, 4, 0, 1, 2]}
-    rotatingIndicies={rotatingIndicies}
+    offsetheight={offsetheight}
+    rotatingindicies={rotatingIndicies}
+    heights={heights}
   >
     <div>{text}</div>
   </StyledCard>

@@ -10,7 +10,13 @@ function ReactNotification(): ReactElement {
   return (
     <GlobalContextProvider items={items}>
       <GlobalStyledWrapper>
-        <Cards />
+        <div
+          style={{
+            width: 600
+          }}
+        >
+          <Cards />
+        </div>
       </GlobalStyledWrapper>
     </GlobalContextProvider>
   );
