@@ -32,6 +32,7 @@ const StyledCard = styled.li<{
     }
     &:nth-child(${rotatingindicies[1] + 1}) {
       background: #e2e7ed;
+      clip-path: inset(50% 0 0 0);
       color: #e2e7ed;
       transform: perspective(100px)
         translate3d(0,
