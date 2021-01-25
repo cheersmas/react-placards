@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components';
+import { configuration } from './data/data';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      items={configuration.items}
+      width={configuration.width}
+      timing={configuration.timing}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
