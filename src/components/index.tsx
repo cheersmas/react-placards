@@ -1,20 +1,20 @@
 import type { ReactElement } from 'react';
 import React from 'react';
 
-import items from '../data/data';
+import type { Configuration } from '../types/Configuration.types';
 import Cards from './cards';
 import GlobalContextProvider from './GlobalContext';
 import GlobalStyledWrapper from './GlobalStyledWrapper';
 
-function ReactNotification(): ReactElement {
+function ReactNotification({
+  width,
+  items,
+  timing
+}: Configuration): ReactElement {
   return (
-    <GlobalContextProvider items={items}>
+    <GlobalContextProvider width={width} items={items} timing={timing}>
       <GlobalStyledWrapper>
-        <div
-          style={{
-            width: 600
-          }}
-        >
+        <div style={{ width }}>
           <Cards />
         </div>
       </GlobalStyledWrapper>
