@@ -19,13 +19,7 @@ export const useRotatingIndicies = (
     }
   };
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (counter === size - 1) {
-        setCounter(0);
-      } else {
-        setCounter(counter + 1);
-      }
-    }, duration);
+    const timer = setInterval(() => updateCounter(), duration);
     return () => {
       clearInterval(timer);
     };
