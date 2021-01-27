@@ -22,7 +22,7 @@ export const configuration: Configuration = {
       title: 'three',
       heading: 'three',
       description:
-        'three is the text of is the text of the body andis the text of the body and we have thsi to show'
+        'three is the text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text of the body andis the text of the body and we have thsi to show'
     },
     {
       title: 'four',
@@ -43,6 +43,6 @@ export const configuration: Configuration = {
     }
   ],
   width: 400,
-  timing: 5000
+  timing: 2000
 };
 export default configuration;
