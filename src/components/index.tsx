@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import React from 'react';
 
+import useGenerateArray from '../hooks/useGenerateArray';
 import type { Configuration } from '../types/Configuration.types';
 import Cards from './cards';
 import GlobalContextProvider from './GlobalContext';
@@ -11,8 +12,9 @@ function ReactNotification({
   items,
   timing
 }: Configuration): ReactElement {
+  const newItems = useGenerateArray(items, 5);
   return (
-    <GlobalContextProvider width={width} items={items} timing={timing}>
+    <GlobalContextProvider width={width} items={newItems} timing={timing}>
       <GlobalStyledWrapper>
         <div style={{ width }}>
           <Cards />

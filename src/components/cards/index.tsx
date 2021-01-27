@@ -8,10 +8,10 @@ import { GlobalContext } from '../GlobalContext';
 import Card from './Card';
 
 const Cards: FC = () => {
-  const { items } = useContext(GlobalContext);
-  const { currentArray } = useTraversingArray(items, 5, 1000);
+  const { items, timing } = useContext(GlobalContext);
+  const { currentArray } = useTraversingArray(items || [], 5, timing);
   const [cardRefs, measurements] = useRefsMeasurements<HTMLLIElement>(
-    items.length
+    items?.length || 5
   );
   return (
     <>

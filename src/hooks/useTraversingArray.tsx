@@ -1,15 +1,15 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import calculateRotatingIndicies from '../utils/helpers';
+import type { Item } from '../types/components/Notification.types';
 
 const useTraversingArray = (
-  array: number[],
+  array: Item[] = [],
   width: number,
   duration = 5000
-) => {
+): { currentArray: number[] } => {
   // TODO explore if you could use useRef/useState in here
-  // returns the indicies of the current array
-  const [stateArray, setStateArray] = useState(array.map((v, i) => i));
+  // returns the indicies of the current array);
+  const [stateArray, setStateArray] = useState(() => array.map((v, i) => i));
   const [start, setStart] = useState(0);
   const end = (start + width - 1) % stateArray.length;
 
@@ -24,7 +24,7 @@ const useTraversingArray = (
       setStateArray(() =>
         Array.from({ length: newSize })
           .fill(0)
-          .map((z, i) => stateArray[i % array.length])
+          .map((z, i) => i)
       );
     }
   }, []);
