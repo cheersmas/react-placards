@@ -14,7 +14,7 @@ const Card: FC<{
 }> = ({
   cardRef,
   current,
-  item: { id, description },
+  item: { id, title, heading, description },
   offsetheight,
   rotatingIndicies,
   heights
@@ -27,7 +27,12 @@ const Card: FC<{
     rotatingindicies={rotatingIndicies}
     heights={heights}
   >
-    <div>{description}</div>
+    <section>
+      <h2>
+        {title} - <span>{heading}</span>
+      </h2>
+      <p>{description}</p>
+    </section>
   </StyledCard>
 );
 

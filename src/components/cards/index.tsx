@@ -7,7 +7,7 @@ import StyledCardContainer from '../../styles/components/cards/StyledCardContain
 import { GlobalContext } from '../GlobalContext';
 import Card from './Card';
 
-const Cards: FC = () => {
+const Cards: FC = ({ children }) => {
   const { items, timing } = useContext(GlobalContext);
   const { currentArray } = useTraversingArray(items || [], 5, timing);
   const [cardRefs, measurements] = useRefsMeasurements<HTMLLIElement>(
