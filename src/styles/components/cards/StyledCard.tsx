@@ -25,9 +25,9 @@ const StyledCard = styled.li<{
     top: 0;
     transform: perspective(100px) translate3d(0, -${offsetheight + 400}px, 80px);
     transform-origin: 50% ${offsetheight}px;
-    transition: ${settransition(default_duration,
+    transition: ${setTransition(DEFAULT_DURATION,
     'ease-in-out',
-    default_delay)};
+    DEFAULT_DELAY)};
     z-index: 5;
     &:nth-child(${rotatingindicies[0] + 1}) {
       box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
@@ -35,15 +35,15 @@ const StyledCard = styled.li<{
       filter: blur(0);
       opacity: 1;
       transform: translate3d(0, 0, 0);
-      transition: ${settransition(default_duration,
-      default_easing,
-      default_delay)};
+      transition: ${setTransition(DEFAULT_DURATION,
+      DEFAULT_EASING,
+      DEFAULT_DELAY)};
       visibility: visible;
       z-index: 4;
     }
     &:nth-child(${rotatingindicies[1] + 1}) {
       background: #e2e7ed;
-      clip-path: ${calculateclip(offsetheight, heights[rotatingindicies[1]])};
+      clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[1]])};
       color: #e2e7ed;
       filter: blur(0);
       opacity: 1;
@@ -51,14 +51,14 @@ const StyledCard = styled.li<{
         translate3d(0,
         ${offsetheight - heights[rotatingindicies[1]] + 20}px,
         -10px);
-      transition: ${settransition(default_duration, default_easing, 200)},
+      transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)},
         clip-path 5000ms linear;
       visibility: visible;
       z-index: 3;
     }
     &:nth-child(${rotatingindicies[2] + 1}) {
       background-color: #fafafa;
-      clip-path: ${calculateclip(offsetheight, heights[rotatingindicies[2]])};
+      clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
       color: #fafafa;
       filter: blur(0);
       opacity: 1;
@@ -66,7 +66,7 @@ const StyledCard = styled.li<{
         translate3d(0,
         ${offsetheight - heights[rotatingindicies[2]] + 40}px,
         -20px);
-      transition: ${settransition(default_duration, default_easing, 300)};
+      transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 300)};
       visibility: visible;
       z-index: 2;
     }
@@ -79,7 +79,7 @@ const StyledCard = styled.li<{
         translate3d(0,
         ${offsetheight - heights[rotatingindicies[3]] + 65}px,
         -30px);
-      transition: ${settransition(default_duration, default_easing, 400)};
+      transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
       visibility: visible;
       z-index: 1;
     }
