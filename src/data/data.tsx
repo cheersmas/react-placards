@@ -28,6 +28,10 @@ export const configuration: Configuration = {
     boxShadow: '',
     borderRadius: '4px',
     padding: '20px'
+  },
+  stackCardStyles: {
+    secondColor: '#ffeeff',
+    thirdColor: '#ddeedd'
   }
 };
 export default configuration;

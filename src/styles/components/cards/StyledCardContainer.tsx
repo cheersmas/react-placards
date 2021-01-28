@@ -1,5 +1,8 @@
 /* eslint-disable max-lines */
-import type { CardStyleConfiguration } from 'src/types/Configuration.types';
+import type {
+  CardStyleConfiguration,
+  StackCardsStyleConfiguration
+} from 'src/types/Configuration.types';
 import styled, { css } from 'styled-components';
 
 import {
@@ -12,14 +15,24 @@ import {
   setTransition
 } from '../../../utils/styles/cards';
 
-const StyledCardContainer = styled.ul<{
+export type StyledCardContainerProps = {
   initial: boolean;
   offsetheight: number;
   rotatingindicies: number[];
   heights: number[];
   cardStyle?: CardStyleConfiguration;
-}>`
-  ${({ rotatingindicies, initial, heights, offsetheight, cardStyle }) => css`
+  stackCardStyles?: StackCardsStyleConfiguration;
+};
+
+const StyledCardContainer = styled.ul<StyledCardContainerProps>`
+  ${({
+    rotatingindicies,
+    initial,
+    heights,
+    offsetheight,
+    cardStyle,
+    stackCardStyles
+  }) => css`
     list-style: none;
     position: relative;
 
@@ -65,7 +78,7 @@ const StyledCardContainer = styled.ul<{
           clip-path 400ms linear;
         z-index: 3;
         ${resetStyles()}
-        ${insertAfter('#e2e7ed')}
+        ${insertAfter(stackCardStyles?.secondColor || '#e2e7ed')}
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
@@ -76,7 +89,7 @@ const StyledCardContainer = styled.ul<{
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 300)};
         z-index: 2;
         ${resetStyles()}
-        ${insertAfter('#f0f0f0')}
+        ${insertAfter(stackCardStyles?.thirdColor || '#f0f0f0')}
       }
       &:nth-child(${rotatingindicies[3] + 1}) {
         transform: perspective(100px)
