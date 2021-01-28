@@ -14,7 +14,9 @@ const useTraversingArray = (
   const end = (start + width - 1) % stateArray.length;
 
   const updateStart = () =>
-    setStart((prevStart) => (prevStart + 1) % stateArray.length);
+    requestAnimationFrame(() =>
+      setStart((prevStart) => (prevStart + 1) % stateArray.length)
+    );
 
   // effect to generate array if array.length < width
   useEffect(() => {

@@ -14,5 +14,6 @@ export const calculateClip = (
 export const setTransition = (
   duration: number,
   easing: string,
-  delay: number
-): string => `all ${duration}ms ${easing} ${delay}ms`;
+  delay: number,
+  property = 'all'
+): string => `${property} ${duration}ms ${easing} ${delay}ms`;

@@ -52,7 +52,7 @@ const StyledCard = styled.li<{
         ${offsetheight - heights[rotatingindicies[1]] + 20}px,
         -10px);
       transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)},
-        clip-path 5000ms linear;
+        clip-path 400ms linear;
       visibility: visible;
       z-index: 3;
     }

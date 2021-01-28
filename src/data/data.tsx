@@ -42,7 +42,7 @@ export const configuration: Configuration = {
         'six is thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis th to show'
     }
   ],
-  width: 400,
-  timing: 2000
+  width: 200,
+  timing: 5000
 };
 export default configuration;
