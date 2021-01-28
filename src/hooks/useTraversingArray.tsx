@@ -6,9 +6,10 @@ const useTraversingArray = (
   array: Item[] = [],
   width: number,
   duration = 5000
-): { currentArray: number[] } => {
+): { initial: boolean; currentArray: number[] } => {
   // TODO explore if you could use useRef/useState in here
   // returns the indicies of the current array);
+  const [initial, setInitial] = useState(true);
   const [stateArray, setStateArray] = useState(() => array.map((v, i) => i));
   const [start, setStart] = useState(0);
   const end = (start + width - 1) % stateArray.length;
@@ -34,16 +35,19 @@ const useTraversingArray = (
   useEffect(() => {
     const timer = setInterval(() => {
       updateStart();
+      setInitial(false);
     }, duration);
     return () => clearInterval(timer);
   });
 
   if (start < end) {
     return {
+      initial,
       currentArray: stateArray.slice(start, end + 1)
     };
   }
   return {
+    initial,
     currentArray: [
       ...stateArray.slice(start, stateArray.length),
       ...stateArray.slice(0, end + 1)

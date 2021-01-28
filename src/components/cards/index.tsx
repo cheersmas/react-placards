@@ -7,25 +7,22 @@ import StyledCardContainer from '../../styles/components/cards/StyledCardContain
 import { GlobalContext } from '../GlobalContext';
 import Card from './Card';
 
-const Cards: FC = ({ children }) => {
+const Cards: FC = () => {
   const { items, timing } = useContext(GlobalContext);
-  const { currentArray } = useTraversingArray(items || [], 5, timing);
+  const { initial, currentArray } = useTraversingArray(items || [], 5, timing);
   const [cardRefs, measurements] = useRefsMeasurements<HTMLLIElement>(
     items?.length || 5
   );
   return (
     <>
-      <StyledCardContainer>
+      <StyledCardContainer
+        initial={initial}
+        offsetheight={measurements[currentArray[0]]?.offsetHeight}
+        heights={measurements.map((i) => i.offsetHeight)}
+        rotatingindicies={currentArray}
+      >
         {items?.map((item, index) => (
-          <Card
-            current={currentArray[0]}
-            cardRef={cardRefs[index]}
-            offsetheight={measurements[currentArray[0]]?.offsetHeight}
-            heights={measurements.map((i) => i.offsetHeight)}
-            item={item}
-            key={item.id}
-            rotatingIndicies={currentArray}
-          />
+          <Card cardRef={cardRefs[index]} item={item} key={item.id} />
         ))}
       </StyledCardContainer>
     </>

@@ -21,8 +21,7 @@ export const configuration: Configuration = {
     {
       title: 'three',
       heading: 'three',
-      description:
-        'three is the text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text o text of is the text of the body andis the text of the body and we have thsi to show'
+      description: 'three is the text of the body and we have thsi to show'
     },
     {
       title: 'four',
@@ -42,7 +41,7 @@ export const configuration: Configuration = {
         'six is thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis thhe texis th to show'
     }
   ],
-  width: 200,
+  width: 400,
   timing: 5000
 };
 export default configuration;

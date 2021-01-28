@@ -17,11 +17,7 @@ function ReactNotification({
     <GlobalContextProvider width={width} items={newItems} timing={timing}>
       <GlobalStyledWrapper>
         <div style={{ width }}>
-          <Cards>
-            <div>one</div>
-            <div>two</div>
-            <div>three</div>
-          </Cards>
+          <Cards />
         </div>
       </GlobalStyledWrapper>
     </GlobalContextProvider>
