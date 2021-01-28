@@ -1,22 +1,11 @@
 import type { FC } from 'react';
 import React from 'react';
-import type { Item } from 'src/types/components/Notification.types';
-import type {
-  CardStyleConfiguration,
-  StackCardsStyleConfiguration
-} from 'src/types/Configuration.types';
+import type { CardsProps } from 'src/types/components/Components.types';
 
 import useRefsMeasurements from '../../hooks/useRefsMeasurements';
 import useTraversingArray from '../../hooks/useTraversingArray';
 import StyledCardContainer from '../../styles/components/cards/StyledCardContainer';
 import Card from './Card';
-
-type CardsProps = {
-  items?: Item[];
-  timing?: number;
-  cardStyle?: CardStyleConfiguration;
-  stackCardStyles?: StackCardsStyleConfiguration;
-};
 
 const Cards: FC<CardsProps> = ({
   items,

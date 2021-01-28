@@ -1,4 +1,4 @@
-import type { Item } from './components/Notification.types';
+import type { Item } from './components/Components.types';
 
 export type CardStyleConfiguration = {
   padding?: string;
@@ -11,6 +11,7 @@ export type StackCardsStyleConfiguration = {
   secondColor?: string;
   thirdColor?: string;
 };
+
 export type Configuration = {
   items?: Item[];
   width?: number;

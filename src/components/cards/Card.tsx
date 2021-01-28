@@ -1,12 +1,9 @@
-import type { FC, RefObject } from 'react';
+import type { FC } from 'react';
 import React from 'react';
 
-import type { Item } from '../../types/components/Notification.types';
+import type { CardProps } from '../../types/components/Components.types';
 
-const Card: FC<{
-  item: Item;
-  cardRef: RefObject<HTMLLIElement>;
-}> = ({ cardRef, item: { id, content } }) => (
+const Card: FC<CardProps> = ({ cardRef, item: { id, content } }) => (
   <li key={id} ref={cardRef}>
     <section>{content}</section>
   </li>

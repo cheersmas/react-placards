@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import type { Item } from '../types/components/Notification.types';
+import type { Item } from '../types/components/Components.types';
 
 const useTraversingArray = (
   array: Item[] = [],
