@@ -7,6 +7,8 @@ import {
   DEFAULT_DELAY,
   DEFAULT_DURATION,
   DEFAULT_EASING,
+  insertAfter,
+  resetStyles,
   setTransition
 } from '../../../utils/styles/cards';
 
@@ -26,11 +28,9 @@ const StyledCardContainer = styled.ul<{
     }
 
     li {
-      background-color: rgb(255, 255, 255);
+      background-color: ${cardStyle?.backgroundColor || 'rgb(255, 255, 255)'};
       border-radius: ${cardStyle?.borderRadius || '4px'};
-      filter: blur(100px);
       left: 0;
-      opacity: 0;
       padding: ${cardStyle?.padding || 0};
       position: absolute;
       right: 0;
@@ -42,23 +42,21 @@ const StyledCardContainer = styled.ul<{
       'ease-in-out',
       DEFAULT_DELAY)};
       z-index: 6;
+      ${resetStyles(100, 0)}
       &:nth-child(${rotatingindicies[0] + 1}) {
         box-shadow: ${cardStyle?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
-        filter: blur(0);
-        opacity: 1;
         transform: translate3d(0, 0, 0);
         transition: ${setTransition(DEFAULT_DURATION,
         DEFAULT_EASING,
         DEFAULT_DELAY)};
         z-index: 4;
+        ${resetStyles()}
+        ${insertAfter()}
       }
       &:nth-child(${rotatingindicies[1] + 1}) {
-        background: #e2e7ed;
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[1]])};
-        color: #e2e7ed;
-        filter: blur(0);
-        opacity: 1;
+        overflow: auto;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[1]] + 30}px,
@@ -66,32 +64,29 @@ const StyledCardContainer = styled.ul<{
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)},
           clip-path 400ms linear;
         z-index: 3;
+        ${resetStyles()}
+        ${insertAfter('#e2e7ed')}
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
-        background-color: #fafafa;
-        background-size: cover;
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
-        color: #fafafa;
-        filter: blur(0);
-        opacity: 1;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[2]] + 60}px,
           -20px);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 300)};
         z-index: 2;
+        ${resetStyles()}
+        ${insertAfter('#f0f0f0')}
       }
       &:nth-child(${rotatingindicies[3] + 1}) {
-        background-color: #fafafa;
-        color: #fafafa;
-        filter: blur(0);
-        opacity: 0;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[3]] + 90}px,
           -30px);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
         z-index: 1;
+        ${resetStyles(0, 0)}
+        ${insertAfter('#fafafa')}
       }
     }
   `}

@@ -4,6 +4,7 @@ export type CardStyleConfiguration = {
   padding?: string;
   boxShadow?: string;
   borderRadius?: string;
+  backgroundColor?: string;
 };
 export type Configuration = {
   items?: Item[];

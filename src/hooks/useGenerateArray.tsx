@@ -6,7 +6,7 @@ import { generateUniqueId } from '../utils/helpers';
 const useGenerateArrayWithIds = (
   array: Item[] = [],
   width = 5
-): Item[] | undefined => {
+): Item[] | [] => {
   // TODO explore if you could use useRef/useState in here
   // returns the indicies of the current array
   const [stateArray, setStateArray] = useState(array);

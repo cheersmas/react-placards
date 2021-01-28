@@ -11,6 +11,24 @@ export const calculateClip = (
   }
   return `inset(0 0 0 0)`;
 };
+
+export const insertAfter = (backgroundColor = 'none'): string => `&::after {
+  background: ${backgroundColor};
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1000ms linear;
+  width: 100%;
+}`;
+
+export const resetStyles = (
+  filter = 0,
+  opacity = 1
+): string => `filter: blur(${filter}px);
+opacity: ${opacity};`;
+
 export const setTransition = (
   duration: number,
   easing: string,
