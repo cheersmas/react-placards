@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import type { CardStyleConfiguration } from 'src/types/Configuration.types';
 import styled, { css } from 'styled-components';
 
 import {
@@ -14,8 +15,9 @@ const StyledCardContainer = styled.ul<{
   offsetheight: number;
   rotatingindicies: number[];
   heights: number[];
+  cardStyle?: CardStyleConfiguration;
 }>`
-  ${({ rotatingindicies, initial, heights, offsetheight }) => css`
+  ${({ rotatingindicies, initial, heights, offsetheight, cardStyle }) => css`
     list-style: none;
     position: relative;
 
@@ -25,10 +27,11 @@ const StyledCardContainer = styled.ul<{
 
     li {
       background-color: rgb(255, 255, 255);
+      border-radius: ${cardStyle?.borderRadius || '4px'};
       filter: blur(100px);
       left: 0;
       opacity: 0;
-      padding: 20px;
+      padding: ${cardStyle?.padding || 0};
       position: absolute;
       right: 0;
       top: 0;
@@ -40,8 +43,8 @@ const StyledCardContainer = styled.ul<{
       DEFAULT_DELAY)};
       z-index: 6;
       &:nth-child(${rotatingindicies[0] + 1}) {
-        box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
-          0 5px 15px rgba(0, 0, 0, 0.07);
+        box-shadow: ${cardStyle?.boxShadow ||
+          '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         filter: blur(0);
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -66,6 +69,7 @@ const StyledCardContainer = styled.ul<{
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
         background-color: #fafafa;
+        background-size: cover;
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
         color: #fafafa;
         filter: blur(0);

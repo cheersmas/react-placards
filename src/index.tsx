@@ -6,11 +6,7 @@ import { configuration } from './data/data';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-      items={configuration.items}
-      width={configuration.width}
-      timing={configuration.timing}
-    />
+    <App {...configuration} />
   </React.StrictMode>,
   document.getElementById('root')
 );

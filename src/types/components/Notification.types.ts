@@ -1,8 +1,8 @@
+import type { ReactElement } from 'react';
+
 export type Item = {
   id?: string;
-  heading: string;
-  description: string;
-  title: string;
+  content: string | ReactElement;
 };
 
 export type ReactNotificationType = {
