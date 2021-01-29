@@ -53,7 +53,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       position: absolute;
       transform: scale(1.2) translateY(-${offsetheight}px);
       transform-origin: 50% ${offsetheight}px;
-      transition: all 1000ms linear, opacity 500ms linear;
+      transition: all 1000ms, opacity 500ms;
       width: 80%;
       z-index: 6;
       ${resetStyles(10, 0)}
@@ -61,9 +61,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         box-shadow: ${cardStyle?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         transform: translate3d(0, 0, 0);
-        transition: ${setTransition(DEFAULT_DURATION,
-        DEFAULT_EASING,
-        DEFAULT_DELAY)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)};
         z-index: 4;
         ${resetStyles()}
         ${insertAfter()}
@@ -75,7 +73,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[1]] + 30}px,
           -10px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)},
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)},
           clip-path 400ms linear;
         z-index: 3;
         ${resetStyles()}
@@ -88,7 +86,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[2]] + 60}px,
           -20px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 300)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
         z-index: 2;
         ${resetStyles()}
         ${insertAfter(stackCardStyles?.thirdColor || '#f0f0f0')}
@@ -98,7 +96,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[3]] + 90}px,
           -30px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 800)};
         z-index: 1;
         ${resetStyles(0, 0)}
         ${insertAfter('#fafafa')}
