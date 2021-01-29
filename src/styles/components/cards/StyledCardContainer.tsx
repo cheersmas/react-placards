@@ -59,6 +59,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       &:nth-child(${rotatingindicies[0] + 1}) {
         box-shadow: ${cardStyle?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
+        clip-path: inset(-100% -100% -100% -100%);
         transform: translate3d(0, 0, 0);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 0)};
         z-index: 4;
