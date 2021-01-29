@@ -51,9 +51,9 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       border-radius: ${cardStyle?.borderRadius || '4px'};
       padding: ${cardStyle?.padding || 0};
       position: absolute;
-      transform: translateY(-${offsetheight}px);
+      transform: scale(1.2) translateY(-${offsetheight}px);
       transform-origin: 50% ${offsetheight}px;
-      transition: all 1000ms linear, opacity 300ms linear;
+      transition: all 1000ms linear, opacity 500ms linear;
       width: 80%;
       z-index: 6;
       ${resetStyles(10, 0)}
