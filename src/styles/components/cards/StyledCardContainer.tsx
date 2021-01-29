@@ -7,7 +7,6 @@ import type {
 } from '../../../types/Configuration.types';
 import {
   calculateClip,
-  DEFAULT_DELAY,
   DEFAULT_DURATION,
   DEFAULT_EASING,
   insertAfter,
@@ -77,7 +76,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           clip-path 400ms linear;
         z-index: 3;
         ${resetStyles()}
-        ${insertAfter(stackCardStyles?.secondColor || '#e2e7ed')}
+        ${insertAfter(stackCardStyles?.secondColor || '#f0f0f0')}
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
@@ -89,7 +88,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
         z-index: 2;
         ${resetStyles()}
-        ${insertAfter(stackCardStyles?.thirdColor || '#f0f0f0')}
+        ${insertAfter(stackCardStyles?.thirdColor || '#fafafa')}
       }
       &:nth-child(${rotatingindicies[3] + 1}) {
         transform: perspective(100px)

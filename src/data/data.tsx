@@ -37,10 +37,6 @@ export const configuration: Configuration = {
   cardStyle: {
     borderRadius: '4px',
     padding: '20px'
-  },
-  stackCardStyles: {
-    secondColor: '#ffeeff',
-    thirdColor: '#ddeedd'
   }
 };
 export default configuration;
