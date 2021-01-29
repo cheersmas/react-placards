@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components';
+import { Banners } from './components';
 import { configuration } from './data/data';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App {...configuration} />
+    <Banners {...configuration} />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -16,5 +16,11 @@
     "jsx": "react"
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "__tests__/**/*.test.tsx",
+    "node_modules",
+    "dist",
+    "rollup.config.js"
+  ],
+  "files": ["src/components/index.tsx"]
 }
