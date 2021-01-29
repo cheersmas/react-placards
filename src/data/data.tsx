@@ -9,7 +9,8 @@ export const Home = () => (
       backgroundColor: '#000'
     }}
   >
-    Hello World!
+    <h1>Payments</h1>
+    <p>partho fethaoesuaotheusaoetuh</p>
   </div>
 );
 

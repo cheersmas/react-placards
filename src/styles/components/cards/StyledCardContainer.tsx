@@ -60,7 +60,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         box-shadow: ${cardStyle?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         transform: translate3d(0, 0, 0);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 0)};
         z-index: 4;
         ${resetStyles()}
         ${insertAfter()}
@@ -72,8 +72,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[1]] + 30}px,
           -10px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)},
-          clip-path 400ms linear;
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 200)};
         z-index: 3;
         ${resetStyles()}
         ${insertAfter(stackCardStyles?.secondColor || '#f0f0f0')}
@@ -85,7 +84,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[2]] + 60}px,
           -20px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
         z-index: 2;
         ${resetStyles()}
         ${insertAfter(stackCardStyles?.thirdColor || '#fafafa')}
@@ -95,7 +94,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[3]] + 90}px,
           -30px);
-        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 800)};
+        transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
         z-index: 1;
         ${resetStyles(0, 0)}
         ${insertAfter('#fafafa')}
