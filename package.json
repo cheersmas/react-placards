@@ -4,6 +4,7 @@
   "description": "A component inspired from stripe's banners",
   "main": "dist/react-banners.js",
   "module": "dist/react-banners.esm.js",
+  "umd": "dist/react-banners.umd.js",
   "files": [
     "dist"
   ],

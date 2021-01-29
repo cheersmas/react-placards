@@ -1,10 +1,10 @@
 /* eslint-disable max-lines */
+import styled, { css } from 'styled-components';
+
 import type {
   CardStyleConfiguration,
   StackCardsStyleConfiguration
-} from 'src/types/Configuration.types';
-import styled, { css } from 'styled-components';
-
+} from '../../../types/Configuration.types';
 import {
   calculateClip,
   DEFAULT_DELAY,

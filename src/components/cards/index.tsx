@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 import React from 'react';
-import type { CardsProps } from 'src/types/components/Components.types';
 
 import useRefsMeasurements from '../../hooks/useRefsMeasurements';
 import useTraversingArray from '../../hooks/useTraversingArray';
 import StyledCardContainer from '../../styles/components/cards/StyledCardContainer';
+import type { CardsProps } from '../../types/components/Components.types';
 import Card from './Card';
 
 const Cards: FC<CardsProps> = ({

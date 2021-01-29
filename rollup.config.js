@@ -16,7 +16,7 @@ const banner = `/*
 `;
 
 export default {
-  input: 'src/components/index.tsx',
+  input: 'src/react-banners.tsx',
   output: [
     {
       banner,
@@ -31,6 +31,18 @@ export default {
       file: packageJson.module,
       format: 'esm',
       strict: true
+    },
+    {
+      file: packageJson.umd,
+      format: 'umd',
+      exports: 'named',
+      strict: true,
+      banner,
+      name: 'ReactChrono',
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM'
+      }
     }
   ],
   plugins: [
@@ -56,5 +68,5 @@ export default {
       }
     })
   ],
-  external: ['react', 'react-dom', '@babel/runtime', 'styled-components']
+  external: ['react', 'react-dom', '@babel/runtime']
 };

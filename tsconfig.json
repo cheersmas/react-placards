@@ -1,26 +1,35 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "target": "es5",
+    "target": "es2019",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react"
+    "jsx": "react",
+    "noEmit": true,
+    "rootDir": "src",
+    "declaration": true,
+    "declarationDir": "dist"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": [
+    "src/components",
+    "src/hooks",
+    "src/utils",
+    "src/types",
+    "src/styles"
+  ],
   "exclude": [
     "__tests__/**/*.test.tsx",
     "node_modules",
     "dist",
     "rollup.config.js"
   ],
-  "files": ["src/components/index.tsx"]
+  "files": ["src/react-banners.tsx"]
 }
