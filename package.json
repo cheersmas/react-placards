@@ -15,6 +15,7 @@
     "build": "snowpack build",
     "eslint": "eslint .",
     "rollup": "rimraf ./dist && rollup -c",
+    "prepublishOnly": "npm run rollup",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint **/*.tsx",
     "prettier": "prettier --write .",
