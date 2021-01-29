@@ -20,12 +20,21 @@ export const configuration: Configuration = {
     },
     {
       content: <Home />
+    },
+    {
+      content: <Home />
+    },
+    {
+      content: <Home />
+    },
+    {
+      content: <Home />
     }
   ],
   width: 400,
+  height: 400,
   timing: 2000,
   cardStyle: {
-    boxShadow: '',
     borderRadius: '4px',
     padding: '20px'
   },

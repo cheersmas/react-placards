@@ -33,8 +33,14 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     cardStyle,
     stackCardStyles
   }) => css`
+    box-sizing: content-box;
+    left: 5%;
     list-style: none;
+    margin: 0;
+    padding: 0;
     position: relative;
+    top: 20%;
+    width: 100%;
 
     * {
       transition: ${initial && 'none !important'};
@@ -43,19 +49,16 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     li {
       background-color: ${cardStyle?.backgroundColor || 'rgb(255, 255, 255)'};
       border-radius: ${cardStyle?.borderRadius || '4px'};
-      left: 0;
       padding: ${cardStyle?.padding || 0};
       position: absolute;
-      right: 0;
-      top: 0;
-      transform: perspective(100px)
-        translate3d(0, -${offsetheight + 400}px, 80px);
+      transform: perspective(100px) translate3d(0, -${offsetheight / 3}px, 20px);
       transform-origin: 50% ${offsetheight}px;
-      transition: ${setTransition(DEFAULT_DURATION,
-      'ease-in-out',
+      transition: ${setTransition(DEFAULT_DURATION / 2,
+      'linear',
       DEFAULT_DELAY)};
+      width: 80%;
       z-index: 6;
-      ${resetStyles(100, 0)}
+      ${resetStyles(10, 0)}
       &:nth-child(${rotatingindicies[0] + 1}) {
         box-shadow: ${cardStyle?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
@@ -82,6 +85,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
+        overflow: auto;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[2]] + 60}px,

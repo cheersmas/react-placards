@@ -6,13 +6,20 @@ import type { Configuration } from '../types/Configuration.types';
 import Cards from './cards';
 
 function ReactNotification({
+  height,
   width,
   items,
   ...rest
 }: Configuration): ReactElement {
   const newItems = useGenerateArray(items, 5);
   return (
-    <div style={{ width }}>
+    <div
+      style={{
+        height,
+        width,
+        overflow: 'hidden'
+      }}
+    >
       <Cards {...{ items: newItems, ...rest }} />
     </div>
   );
