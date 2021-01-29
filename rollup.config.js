@@ -38,7 +38,7 @@ export default {
       exports: 'named',
       strict: true,
       banner,
-      name: 'ReactChrono',
+      name: 'ReactBanners',
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM'

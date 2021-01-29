@@ -38,6 +38,10 @@
     "react-dom": "^17.0.0",
     "styled-components": "^5.2.1"
   },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",

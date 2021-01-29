@@ -23,7 +23,7 @@ export const configuration: Configuration = {
     }
   ],
   width: 400,
-  timing: 5000,
+  timing: 2000,
   cardStyle: {
     boxShadow: '',
     borderRadius: '4px',
