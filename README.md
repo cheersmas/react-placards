@@ -1,3 +1,3 @@
-# React Notification
+# React Banners
 
-A fancy notification component.
+A fancy banner component for react.
