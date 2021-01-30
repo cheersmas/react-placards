@@ -1,51 +1,63 @@
+import type { FC, ReactElement } from 'react';
 import React from 'react';
 
 import type { Configuration } from '../types/Configuration.types';
 
-export const Home = () => (
-  <div
-    style={{
-      padding: 10
-    }}
-  >
-    <h1>Payments</h1>
-    <p>partho fethaoesuaotheusaoetuh</p>
+export const Content = ({ heading, date, description }): ReactElement => (
+  <div style={{ fontSize: 14 }}>
+    <strong>{heading}</strong> <span>{date}</span>
+    <p>{description}</p>
   </div>
 );
 
 export const configuration: Configuration = {
   items: [
     {
-      id: 'one',
-      content: 'This is a text content!'
+      id: 'content-types',
+      content: (
+        <Content
+          heading="Content Types"
+          date="12-12-2020"
+          description="You can pass in a string or a component."
+        />
+      )
     },
     {
-      id: 'two',
-      content: <Home />
+      id: 'custom-components',
+      content: (
+        <Content
+          heading="Custom Components"
+          date="13-12-2020"
+          description="You can create your own custom components"
+        />
+      )
     },
     {
-      id: 'three',
-      content: <Home />
+      id: 'editing-first-card',
+      content: (
+        <Content
+          heading="Editing First Card"
+          date="01-04-2021"
+          description="You can format the style of current card."
+        />
+      )
     },
     {
-      id: 'four',
-      content: <Home />
-    },
-    {
-      id: 'five',
-      content: <Home />
-    },
-    {
-      id: 'six',
-      content: <Home />
+      id: 'text-value',
+      content: 'You can pass in a plain text string too.'
     }
   ],
-  width: 400,
+  width: 600,
   height: 400,
-  timing: 2000,
-  cardStyle: {
+  timing: 7000,
+  cardStyles: {
     borderRadius: '4px',
-    padding: '20px'
+    padding: '32px'
+  },
+  stackCardStyles: {
+    secondColor: '#fefe',
+    thirdColor: '#efef'
   }
 };
+
 export default configuration;

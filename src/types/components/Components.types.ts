@@ -12,7 +12,7 @@ export type Item = {
 export type CardsProps = {
   items?: Item[];
   timing?: number;
-  cardStyle?: CardStyleConfiguration;
+  cardStyles?: CardStyleConfiguration;
   stackCardStyles?: StackCardsStyleConfiguration;
 };
 

@@ -10,7 +10,7 @@ import Card from './Card';
 const Cards: FC<CardsProps> = ({
   items,
   timing,
-  cardStyle,
+  cardStyles,
   stackCardStyles
 }) => {
   const { initial, currentArray } = useTraversingArray(items || [], 5, timing);
@@ -24,7 +24,7 @@ const Cards: FC<CardsProps> = ({
         offsetheight={measurements[currentArray[0]]?.offsetHeight}
         heights={measurements.map((i) => i.offsetHeight)}
         rotatingindicies={currentArray}
-        cardStyle={cardStyle}
+        cardStyles={cardStyles}
         stackCardStyles={stackCardStyles}
       >
         {items?.map((item, index) => (

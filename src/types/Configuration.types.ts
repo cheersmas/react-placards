@@ -17,6 +17,6 @@ export type Configuration = {
   width: number;
   height: number;
   timing?: number;
-  cardStyle?: CardStyleConfiguration;
+  cardStyles?: CardStyleConfiguration;
   stackCardStyles?: StackCardsStyleConfiguration;
 };

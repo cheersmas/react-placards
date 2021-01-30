@@ -19,7 +19,7 @@ export type StyledCardContainerProps = {
   offsetheight: number;
   rotatingindicies: number[];
   heights: number[];
-  cardStyle?: CardStyleConfiguration;
+  cardStyles?: CardStyleConfiguration;
   stackCardStyles?: StackCardsStyleConfiguration;
 };
 
@@ -29,7 +29,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     initial,
     heights,
     offsetheight,
-    cardStyle,
+    cardStyles,
     stackCardStyles
   }) => css`
     box-sizing: content-box;
@@ -46,9 +46,9 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     }
 
     li {
-      background-color: ${cardStyle?.backgroundColor || 'rgb(255, 255, 255)'};
-      border-radius: ${`${cardStyle?.borderRadius}` || '4px'};
-      padding: ${cardStyle?.padding || '20px'};
+      background-color: ${cardStyles?.backgroundColor || 'rgb(255, 255, 255)'};
+      border-radius: ${`${cardStyles?.borderRadius}` || '4px'};
+      padding: ${cardStyles?.padding || '20px'};
       position: absolute;
       transform: scale(1.2) translateY(-${offsetheight}px);
       transform-origin: 50% ${offsetheight}px;
@@ -57,7 +57,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       z-index: 6;
       ${resetStyles(10, 0)}
       &:nth-child(${rotatingindicies[0] + 1}) {
-        box-shadow: ${cardStyle?.boxShadow ||
+        box-shadow: ${cardStyles?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         clip-path: inset(-100% -100% -100% -100%);
         transform: translate3d(0, 0, 0);
