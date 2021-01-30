@@ -6,6 +6,8 @@
 /.pnp
 .pnp.js
 
+/src/assets
+
 #production
 /build
 yarn.lock

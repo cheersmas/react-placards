@@ -60,6 +60,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         box-shadow: ${cardStyles?.boxShadow ||
           '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         clip-path: inset(-100% -100% -100% -100%);
+        overflow: hidden;
         transform: translate3d(0, 0, 0);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 0)};
         z-index: 4;
@@ -68,7 +69,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       }
       &:nth-child(${rotatingindicies[1] + 1}) {
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[1]])};
-        overflow: auto;
+        overflow: hidden;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[1]] + 30}px,
@@ -80,7 +81,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       }
       &:nth-child(${rotatingindicies[2] + 1}) {
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
-        overflow: auto;
+        overflow: hidden;
         transform: perspective(100px)
           translate3d(0,
           ${offsetheight - heights[rotatingindicies[2]] + 60}px,
@@ -88,7 +89,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
         z-index: 2;
         ${resetStyles()}
-        ${insertAfter(stackCardStyles?.thirdColor || '#fafafa')}
+        ${insertAfter(stackCardStyles?.thirdColor || '#e1e1e1')}
       }
       &:nth-child(${rotatingindicies[3] + 1}) {
         transform: perspective(100px)
@@ -98,7 +99,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
         z-index: 1;
         ${resetStyles(0, 0)}
-        ${insertAfter('#fafafa')}
+        ${insertAfter(stackCardStyles?.thirdColor || '#fff')}
       }
     }
   `}

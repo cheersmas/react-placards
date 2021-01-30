@@ -6,8 +6,8 @@ import type { Configuration } from '../types/Configuration.types';
 import Cards from './cards';
 
 function ReactNotification({
-  height = 200,
-  width = 200,
+  height,
+  width,
   items,
   ...rest
 }: Configuration): ReactElement {
