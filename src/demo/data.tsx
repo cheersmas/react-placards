@@ -145,6 +145,7 @@ export const configuration3: Configuration = {
   ],
   width: 400,
   height: 400,
+  timing: 2000,
   cardStyles: {
     borderRadius: '0',
     padding: '0',
@@ -154,7 +155,9 @@ export const configuration3: Configuration = {
     secondColor: '#4f4f4f',
     thirdColor: '#2d2d2d'
   },
-  containerStyles
+  containerStyles: {
+    padding: '5% 5% 0'
+  }
 };
 export const configuration4: Configuration = {
   items: [
