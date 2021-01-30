@@ -1,70 +1,61 @@
 # React Banners
 
-A fancy banner component for react.
+<h2>Features</h2>
+
+- A banner/announcements component inspired from [Stripe](https://stripe.com)
+- ANNOUNCE your own Custom Components
+- Built with [Typescript](https://www.typescriptlang.org/)
+- Built with [Styled Components](https://www.styled-components.com/)
+
+<h2>Table of Contents</h2>
+
+- [Installation](#-installation)
+- [Getting Started](#getting-started)
+- [Props](#props)
+  - [Item Type](#item-type)
+  - [Stacked Card Style Props](#stacked-card-style-props)
+  - [Top Card Style Props](#top-card-style-props)
+  - [Passing custom height/width](#passing-custom-height/width)
+  - [Passing custom timing](#passing-custom-timing)
+  - [Passing custom styling for Card](#passing-custom-styling-for-card)
+  - [Change second and third card's background](#change-second-and-third-card's-background)
+- [Meta](#meta)
+
+## Installation
+
+```sh
+  yarn add react-banners
+```
 
 ## Getting Started
 
-A default `height` and `width` is given to the component and is required to render the component.
+A default `height` and `width` is given to the component but is required to render the component.
 
 ```sh
 
-  import React, {useMemo} from 'react';
-  import {Banners} from 'react-banners'
-
-  export const Content = ({ heading, date, description }) => (
-    <div style={{fontSize: 14}}>
-      <strong>{heading}</strong> <span class="date">{date}</span>
-      <p>{description}</p>
-    </div>
-  );
+  import React from 'react';
+  import { Banners } from 'react-banners'
 
   function App() {
-    const configuration = useMemo(() => ({
-      items: [
-        {
-          id: "content-types",
-          content: <Content
-            heading="Content Types"
-            date="12-12-2020"
-            description={"You can pass in a string or a component."}
-          />
-        },
-        {
-          id: "custom-components",
-          content: <Content
-            heading="Custom Components"
-            date="13-12-2020"
-            description={"You can create your own custom components"}
-          />
-        },
-        {
-          id: "editing-first-card",
-          content: <Content
-            heading="Editing First Card"
-            date="01-04-2021"
-            description={"You can format the style of current card."}
-          />
-        },
-        {
-          id: "text-value",
-          content: "You can pass in a plain text string too."
-        }
-      ],
-      width: 600,
-      height: 400,
-      timing: 7000,
-      cardStyle: {
-        borderRadius: '4px',
-        padding: '32px'
+    const items = [
+      {
+        id: "content-types",
+        content: "You can pass in a plain text string.",
       },
-      stackCardStyles: {
-        secondColor: '#fefe',
-        thirdColor: '#efef'
-      }
-    }), []);
+      {
+        id: "custom-components",
+        content: <CustomContent
+          heading="Custom Components"
+          date="13-12-2020"
+          description={"OR you can create your own custom components"}
+          {...extraProps}
+        />
+      }, ...];
     return (
       <div className="App">
-        <Banners {...configuration} />
+        <Banners
+          items={items}
+        />
       </div>
     );
   }
@@ -74,14 +65,14 @@ A default `height` and `width` is given to the component and is required to rend
 
 ## Props
 
-| name            | description                                                         | required | default                                                      |
-| --------------- | ------------------------------------------------------------------- | -------- | ------------------------------------------------------------ |
-| items           | collection of [Item Type](#item-type)                               | true     | []                                                           |
-| width           | width of the component                                              | false    | 200                                                          |
-| height          | height of the component                                             | false    | 200                                                          |
-| timing          | delay between card switch                                           | false    | 5000                                                         |
-| cardStyle       | style of the [Top Card Style Props](#top-card-style-props)          | false    | check [Top Card Style Props](#top-card-style-props)          |
-| stackCardStyles | style of the [Stacked Cards Style Props](#stacked-card-style-props) | false    | check [Stacked Cards Style Props](#stacked-card-style-props) |
+| name            | description                                                          | required | default                                                       |
+| --------------- | -------------------------------------------------------------------- | -------- | ------------------------------------------------------------- |
+| items           | collection of [Item Type](#item-type)                                | true     | []                                                            |
+| width           | width of the component                                               | false    | 200                                                           |
+| height          | height of the component                                              | false    | 200                                                           |
+| timing          | delay between card switch                                            | false    | 5000                                                          |
+| cardStyles      | style of the [Top Card Style Props](#top-card-styles-props)          | false    | check [Top Card Style Props](#top-card-styles-props)          |
+| stackCardStyles | style of the [Stacked Cards Style Props](#stacked-card-styles-props) | false    | check [Stacked Cards Style Props](#stacked-card-styles-props) |
 
 ### Item Type
 
@@ -93,8 +84,6 @@ A default `height` and `width` is given to the component and is required to rend
 <h3>
   You can pass in a component or a string to content
 </h3>
-
-> top card's styles will be applied to all the item's content
 
 ```sh
   items = [
@@ -113,7 +102,9 @@ A default `height` and `width` is given to the component and is required to rend
 
 Use the props below to change the styles of top card.
 
-> Note: For more control on styles, reset the default styles and create your own Custom Card component
+> Note: Top card's styles will be applied to all the item's content
+
+> For more control on styles, reset the default styles and create your own Custom Card component
 
 | name            | description                                    | required | default                                                            |
 | --------------- | ---------------------------------------------- | -------- | ------------------------------------------------------------------ |
@@ -122,12 +113,80 @@ Use the props below to change the styles of top card.
 | boxShadow       | box-shadow behind top card                     | false    | `0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)` |
 | padding         | padding applied to top card                    | false    | 0px                                                                |
 
+```sh
+  cardStyles = {
+    backgroundColor: 'red',
+    borderRadius: '4px',
+    boxShadow: '0 10px 30px black',
+    padding: '10px',
+  }
+```
+
 ### Stacked Card Style Props
 
 | name        | description                             | required | default   |
 | ----------- | --------------------------------------- | -------- | --------- |
 | secondColor | background-color applied to second card | false    | `#f0f0f0` |
 | thirdColor  | background-color applied to third card  | false    | `#fafafa` |
+
+```sh
+  stackCardStyles = {
+    secondColor: 'red',
+    thirdColor: 'yellow'
+  }
+```
+
+### Passing custom height/width
+
+By default `height` & `width` have been set to `200px`. Overide them by passing custom values.
+
+```sh
+  <Banners
+    items={items}
+    width="400"
+    height="400"
+  />
+```
+
+### Passing custom timing
+
+By default `timing` has been set to `5000ms`. Overide it by passing custom `timing`.
+
+```sh
+  <Banners
+    items={items}
+    timing="7000"
+  />
+```
+
+### Passing custom styling for Card
+
+Override `cardStyles` by passing custom styles
+
+```sh
+  <Banners
+    items={items}
+    cardStyles={{
+      padding: '10px',
+      borderRadius: '4px',
+      ...moreProperties
+    }}
+  />
+```
+
+### Change second and third card's background
+
+Override background colors of second and third cards
+
+```sh
+  <Banners
+    items={items}
+    stackCardStyles={{
+      secondColor: 'red',
+      thirdColor: 'yellow'
+    }}
+  />
+```
 
 ## Meta
 
