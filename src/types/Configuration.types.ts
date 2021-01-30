@@ -13,9 +13,9 @@ export type StackCardsStyleConfiguration = {
 };
 
 export type Configuration = {
-  items?: Item[];
-  width?: number;
-  height?: number;
+  items: Item[];
+  width: number;
+  height: number;
   timing?: number;
   cardStyle?: CardStyleConfiguration;
   stackCardStyles?: StackCardsStyleConfiguration;

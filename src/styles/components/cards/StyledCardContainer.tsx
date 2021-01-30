@@ -47,8 +47,8 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
 
     li {
       background-color: ${cardStyle?.backgroundColor || 'rgb(255, 255, 255)'};
-      border-radius: ${cardStyle?.borderRadius || '4px'};
-      padding: ${cardStyle?.padding || 0};
+      border-radius: ${`${cardStyle?.borderRadius}` || '4px'};
+      padding: ${cardStyle?.padding || '20px'};
       position: absolute;
       transform: scale(1.2) translateY(-${offsetheight}px);
       transform-origin: 50% ${offsetheight}px;
