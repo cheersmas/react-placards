@@ -15,6 +15,7 @@
   - [Item Type](#item-type)
   - [Stacked Card Style Props](#stacked-card-style-props)
   - [Top Card Style Props](#top-card-style-props)
+  - [Container Style Props](#container-style-props)
   - [Passing custom height/width](#passing-custom-height/width)
   - [Passing custom timing](#passing-custom-timing)
   - [Passing custom styling for Card](#passing-custom-styling-for-card)
@@ -29,7 +30,7 @@
 
 ## Getting Started
 
-A default `height` and `width` is given to the component but is required to render the component.
+A default `height` and `width` is given to the component but is required to render the component: [Refer](#container-style-props)
 
 ```javascript
 
@@ -65,14 +66,15 @@ A default `height` and `width` is given to the component but is required to rend
 
 ## Props
 
-| name            | description                                                          | required | default                                                       |
-| --------------- | -------------------------------------------------------------------- | -------- | ------------------------------------------------------------- |
-| items           | collection of [Item Type](#item-type)                                | true     | []                                                            |
-| width           | width of the component                                               | false    | 200                                                           |
-| height          | height of the component                                              | false    | 200                                                           |
-| timing          | delay between card switch                                            | false    | 5000                                                          |
-| cardStyles      | style of the [Top Card Style Props](#top-card-styles-props)          | false    | check [Top Card Style Props](#top-card-styles-props)          |
-| stackCardStyles | style of the [Stacked Cards Style Props](#stacked-card-styles-props) | false    | check [Stacked Cards Style Props](#stacked-card-styles-props) |
+| name            | description                                                                   | required | default                                                       |
+| --------------- | ----------------------------------------------------------------------------- | -------- | ------------------------------------------------------------- |
+| items           | collection of [Item Type](#item-type)                                         | true     | []                                                            |
+| width           | width of the component                                                        | false    | 200                                                           |
+| height          | height of the component                                                       | false    | 200                                                           |
+| timing          | delay between card switch                                                     | false    | 5000                                                          |
+| cardStyles      | style definitions for [Top Card Style Props](#top-card-styles-props)          | false    | check [Top Card Style Props](#top-card-styles-props)          |
+| stackCardStyles | style definitions for [Stacked Cards Style Props](#stacked-card-styles-props) | false    | check [Stacked Cards Style Props](#stacked-card-styles-props) |
+| containerStyles | style definitions for [Container Style Props](#container-style-props)         | false    | check [Container Style Props](#container-style-props)         |
 
 ### Item Type
 
@@ -133,6 +135,26 @@ cardStyles = {
 stackCardStyles = {
   secondColor: 'red',
   thirdColor: 'yellow'
+};
+```
+
+### Container Style Props
+
+> use these to place your cards inside the container
+
+| name     | description               | required | default |
+| -------- | ------------------------- | -------- | ------- |
+| height   | height of the container   | false    | 200px   |
+| width    | width of the container    | false    | 200px   |
+| overflow | overflow of the container | false    | hidden  |
+| padding  | padding of the container  | false    | 5%      |
+
+```javascript
+stackCardStyles = {
+  height: 200,
+  width: 200,
+  overflow: 'hidden',
+  padding: '5%'
 };
 ```
 
