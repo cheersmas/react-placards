@@ -1,6 +1,6 @@
 # React Banners
 
-<h2>Features</h2>
+<h2>Description</h2>
 
 - A banner/announcements component inspired from [Stripe](https://stripe.com)
 - ANNOUNCE your own Custom Components
@@ -31,7 +31,7 @@
 
 A default `height` and `width` is given to the component but is required to render the component.
 
-```sh
+```javascript
 
   import React from 'react';
   import { Banners } from 'react-banners'
@@ -85,17 +85,17 @@ A default `height` and `width` is given to the component but is required to rend
   You can pass in a component or a string to content
 </h3>
 
-```sh
-  items = [
-    {
-      id: 'unique-id',
-      content: <MyCustomComponent {...props} />
-    },
-    {
-      id: 'unique-id-2',
-      content: 'Text content'
-    }
-  ]
+```javascript
+items = [
+  {
+    id: 'unique-id',
+    content: <MyCustomComponent {...props} />
+  },
+  {
+    id: 'unique-id-2',
+    content: 'Text content'
+  }
+];
 ```
 
 ### Top Card Style Props
@@ -113,13 +113,13 @@ Use the props below to change the styles of top card.
 | boxShadow       | box-shadow behind top card                     | false    | `0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)` |
 | padding         | padding applied to top card                    | false    | 0px                                                                |
 
-```sh
-  cardStyles = {
-    backgroundColor: 'red',
-    borderRadius: '4px',
-    boxShadow: '0 10px 30px black',
-    padding: '10px',
-  }
+```javascript
+cardStyles = {
+  backgroundColor: 'red',
+  borderRadius: '4px',
+  boxShadow: '0 10px 30px black',
+  padding: '10px'
+};
 ```
 
 ### Stacked Card Style Props
@@ -129,63 +129,56 @@ Use the props below to change the styles of top card.
 | secondColor | background-color applied to second card | false    | `#f0f0f0` |
 | thirdColor  | background-color applied to third card  | false    | `#fafafa` |
 
-```sh
-  stackCardStyles = {
-    secondColor: 'red',
-    thirdColor: 'yellow'
-  }
+```javascript
+stackCardStyles = {
+  secondColor: 'red',
+  thirdColor: 'yellow'
+};
 ```
 
 ### Passing custom height/width
 
 By default `height` & `width` have been set to `200px`. Overide them by passing custom values.
 
-```sh
-  <Banners
-    items={items}
-    width="400"
-    height="400"
-  />
+```javascript
+<Banners items={items} width="400" height="400" />
 ```
 
 ### Passing custom timing
 
 By default `timing` has been set to `5000ms`. Overide it by passing custom `timing`.
 
-```sh
-  <Banners
-    items={items}
-    timing="7000"
-  />
+```javascript
+<Banners items={items} timing="7000" />
 ```
 
 ### Passing custom styling for Card
 
 Override `cardStyles` by passing custom styles
 
-```sh
-  <Banners
-    items={items}
-    cardStyles={{
-      padding: '10px',
-      borderRadius: '4px',
-      ...moreProperties
-    }}
-  />
+```javascript
+<Banners
+  items={items}
+  cardStyles={{
+    padding: '10px',
+    borderRadius: '4px',
+    ...moreProperties
+  }}
+/>
 ```
 
 ### Change second and third card's background
 
 Override background colors of second and third cards
 
-```sh
-  <Banners
-    items={items}
-    stackCardStyles={{
-      secondColor: 'red',
-      thirdColor: 'yellow'
-    }}
-  />
+```javascript
+<Banners
+  items={items}
+  stackCardStyles={{
+    secondColor: 'red',
+    thirdColor: 'yellow'
+  }}
+/>
 ```
 
 ## Meta
