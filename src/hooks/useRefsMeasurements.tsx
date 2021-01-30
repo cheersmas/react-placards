@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import type { RectResult } from '../types/hooks/useRect.types';
 import useMultipleRefs from './useMulitpleRefs';
@@ -22,7 +22,7 @@ const useRefsMeasurements = <T extends HTMLElement>(
 ): [RefObject<T>[], RectResult[]] => {
   const [measurements, setMeasurements] = useState<RectResult[]>([]);
   const [refs] = useMultipleRefs(arrayLength);
-  useLayoutEffect(() => {
+  const updateMeasurements = () => {
     if (refs.length) {
       const meta = refs.map((ref: React.RefObject<T>) => {
         const element = ref.current;
@@ -30,6 +30,16 @@ const useRefsMeasurements = <T extends HTMLElement>(
       });
       setMeasurements(meta);
     }
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateMeasurements);
+    return () => {
+      window.removeEventListener('resize', updateMeasurements);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    updateMeasurements();
   }, [refs]);
   return [refs, measurements];
 };
