@@ -36,7 +36,7 @@ A default `height` and `width` is given to the component but is required to rend
 
   import React from 'react';
   import { Banners } from 'react-banners'
-
+  import {CustomComponents} from '../somepath/CustomComponentLibrary.js'
   function App() {
     const items = [
       {
@@ -45,9 +45,9 @@ A default `height` and `width` is given to the component but is required to rend
       },
       {
         id: "custom-components",
-        content: <CustomContent
+        content: <CustomComponents
           heading="Custom Components"
-          date="13-12-2020"
+          date="31-01-2021"
           description={"OR you can create your own custom components"}
           {...extraProps}
         />
