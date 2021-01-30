@@ -6,7 +6,7 @@ import type {
 } from '../Configuration.types';
 
 export type Item = {
-  id?: string;
+  id: string;
   content: string | ReactElement;
 };
 export type CardsProps = {

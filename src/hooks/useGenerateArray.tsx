@@ -23,8 +23,9 @@ const useGenerateArrayWithIds = (
       }
       setStateArray(
         newArray?.map((item) => ({
-          id: generateUniqueId(),
-          ...item
+          ...item,
+          // generate own ids if the items are less than given @width
+          id: generateUniqueId()
         }))
       );
     }

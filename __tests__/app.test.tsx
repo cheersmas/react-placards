@@ -1,7 +1,7 @@
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 
-import { Banners } from '../src/components';
+import { Banners } from '../src/react-banners';
 
 afterEach(cleanup);
 
