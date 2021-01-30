@@ -1,10 +1,10 @@
 {
-  "name": "react-banners",
+  "name": "react-placards",
   "version": "1.0.0",
-  "description": "A component inspired from stripe's banners",
-  "main": "dist/react-banners.js",
-  "module": "dist/react-banners.esm.js",
-  "umd": "dist/react-banners.umd.js",
+  "description": "A component inspired from stripe's placards",
+  "main": "dist/react-placards.js",
+  "module": "dist/react-placards.esm.js",
+  "umd": "dist/react-placards.umd.js",
   "files": [
     "dist"
   ],

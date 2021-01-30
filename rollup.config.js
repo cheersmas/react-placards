@@ -16,7 +16,7 @@ const banner = `/*
 `;
 
 export default {
-  input: 'src/react-banners.tsx',
+  input: 'src/react-placards.tsx',
   output: [
     {
       banner,
@@ -38,7 +38,7 @@ export default {
       exports: 'named',
       strict: true,
       banner,
-      name: 'ReactBanners',
+      name: 'ReactPlacards',
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM'

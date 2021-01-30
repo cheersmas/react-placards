@@ -3,7 +3,7 @@ import './App.css';
 import type { FC } from 'react';
 import React from 'react';
 
-import { Banners } from '../react-banners';
+import { Placards } from '../react-placards';
 import {
   configuration,
   configuration2,
@@ -15,16 +15,16 @@ const App: FC = () => (
   <div className="outer-container">
     <div className="container">
       <div>
-        <Banners {...configuration} />
+        <Placards {...configuration} />
       </div>
       <div>
-        <Banners {...configuration2} />
+        <Placards {...configuration2} />
       </div>
       <div>
-        <Banners {...configuration4} />
+        <Placards {...configuration4} />
       </div>
       <div>
-        <Banners {...configuration3} />
+        <Placards {...configuration3} />
       </div>
     </div>
   </div>

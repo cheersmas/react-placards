@@ -1,8 +1,8 @@
-# React Banners
+# React Placards
 
 <h2>Description</h2>
 
-- A banner/announcements component inspired from [Stripe](https://stripe.com)
+- A placards component inspired from [Stripe](https://stripe.com)
 - ANNOUNCE your own Custom Components
 - Built with [Typescript](https://www.typescriptlang.org/)
 - Built with [Styled Components](https://www.styled-components.com/)
@@ -25,7 +25,7 @@
 ## Installation
 
 ```sh
-  yarn add react-banners
+  yarn add react-placards
 ```
 
 ## Getting Started
@@ -35,7 +35,7 @@ A default `height` and `width` is given to the component but is required to rend
 ```javascript
 
   import React from 'react';
-  import { Banners } from 'react-banners'
+  import { Placards } from 'react-placards'
   import {CustomComponents} from '../somepath/CustomComponentLibrary.js'
   function App() {
     const items = [
@@ -54,7 +54,7 @@ A default `height` and `width` is given to the component but is required to rend
       }, ...];
     return (
       <div className="App">
-        <Banners
+        <Placards
           items={items}
         />
       </div>
@@ -163,7 +163,7 @@ stackCardStyles = {
 By default `height` & `width` have been set to `200px`. Overide them by passing custom values.
 
 ```javascript
-<Banners items={items} width="400" height="400" />
+<Placards items={items} width="400" height="400" />
 ```
 
 ### Passing custom timing
@@ -171,7 +171,7 @@ By default `height` & `width` have been set to `200px`. Overide them by passing 
 By default `timing` has been set to `5000ms`. Overide it by passing custom `timing`.
 
 ```javascript
-<Banners items={items} timing="7000" />
+<Placards items={items} timing="7000" />
 ```
 
 ### Passing custom styling for Card
@@ -179,7 +179,7 @@ By default `timing` has been set to `5000ms`. Overide it by passing custom `timi
 Override `cardStyles` by passing custom styles
 
 ```javascript
-<Banners
+<Placards
   items={items}
   cardStyles={{
     padding: '10px',
@@ -194,7 +194,7 @@ Override `cardStyles` by passing custom styles
 Override background colors of second and third cards
 
 ```javascript
-<Banners
+<Placards
   items={items}
   stackCardStyles={{
     secondColor: 'red',

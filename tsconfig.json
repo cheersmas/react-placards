@@ -32,5 +32,5 @@
     "dist",
     "rollup.config.js"
   ],
-  "files": ["src/react-banners.tsx"]
+  "files": ["src/react-placards.tsx"]
 }
