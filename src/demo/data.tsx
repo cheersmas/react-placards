@@ -9,6 +9,8 @@ import stackoverflowlogo from '../assets/stackoverflow.svg';
 import type { Configuration } from '../types/Configuration.types';
 import Content, { ChangingBackground, MediaContent } from './Content';
 
+const containerStyles = { padding: '10% 5%' };
+
 export const configuration: Configuration = {
   items: [
     {
@@ -52,7 +54,8 @@ export const configuration: Configuration = {
   cardStyles: {
     borderRadius: '4px',
     padding: '20px'
-  }
+  },
+  containerStyles
 };
 
 export const configuration2: Configuration = {
@@ -88,7 +91,8 @@ export const configuration2: Configuration = {
   cardStyles: {
     borderRadius: '12px',
     padding: '16px'
-  }
+  },
+  containerStyles
 };
 
 export const configuration3: Configuration = {
@@ -149,7 +153,8 @@ export const configuration3: Configuration = {
   stackCardStyles: {
     secondColor: '#4f4f4f',
     thirdColor: '#2d2d2d'
-  }
+  },
+  containerStyles
 };
 export const configuration4: Configuration = {
   items: [
@@ -186,7 +191,8 @@ export const configuration4: Configuration = {
   stackCardStyles: {
     secondColor: '#b0521f',
     thirdColor: '#8c4018'
-  }
+  },
+  containerStyles
 };
 
 export default configuration;
