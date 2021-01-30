@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 import type { Item } from './components/Components.types';
 
 export type CardStyleConfiguration = {
@@ -16,6 +18,7 @@ export type Configuration = {
   items: Item[];
   width: number | string;
   height: number | string;
+  containerStyles?: CSSProperties;
   timing?: number;
   cardStyles?: CardStyleConfiguration;
   stackCardStyles?: StackCardsStyleConfiguration;

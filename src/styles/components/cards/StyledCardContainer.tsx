@@ -33,12 +33,10 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     stackCardStyles
   }) => css`
     box-sizing: content-box;
-    left: 5%;
     list-style: none;
     margin: 0;
     padding: 0;
     position: relative;
-    top: 20%;
     width: 100%;
 
     * {
@@ -48,12 +46,13 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
     li {
       background-color: ${cardStyles?.backgroundColor || 'rgb(255, 255, 255)'};
       border-radius: ${`${cardStyles?.borderRadius}` || '4px'};
+      box-sizing: border-box;
       padding: ${cardStyles?.padding || '20px'};
       position: absolute;
       transform: scale(1.2) translateY(-${offsetheight}px);
       transform-origin: 50% ${offsetheight}px;
       transition: all 1000ms, opacity 500ms;
-      width: 80%;
+      width: 100%;
       z-index: 6;
       ${resetStyles(10, 0)}
       &:nth-child(${rotatingindicies[0] + 1}) {

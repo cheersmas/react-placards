@@ -9,6 +9,7 @@ function ReactNotification({
   height,
   width,
   items,
+  containerStyles,
   ...rest
 }: Configuration): ReactElement {
   const newItems = useGenerateArray(items, 5);
@@ -17,7 +18,10 @@ function ReactNotification({
       style={{
         height,
         width,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        boxSizing: 'border-box',
+        padding: '5%',
+        ...containerStyles
       }}
     >
       <Cards {...{ items: newItems, ...rest }} />
