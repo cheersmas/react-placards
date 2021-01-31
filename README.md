@@ -1,8 +1,11 @@
 # React Placards
 
-<div>
-  <img src="./readme-assets/card.gif" />
+<div align="center">
+  <div>
+    <img src="./readme-assets/card.gif" />
+  </div>
 </div>
+
 <h2>Description</h2>
 
 - A placards component inspired from [Stripe](https://stripe.com)
