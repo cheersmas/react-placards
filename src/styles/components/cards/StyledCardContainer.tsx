@@ -57,7 +57,7 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       ${resetStyles(10, 0)}
       &:nth-child(${rotatingindicies[0] + 1}) {
         box-shadow: ${cardStyles?.boxShadow ||
-        '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
+          '0 15px 35px rgba(50, 50, 93, 0.1),0 5px 15px rgba(0, 0, 0, 0.07)'};
         clip-path: inset(-100% -100% -100% -100%);
         overflow: hidden;
         transform: translate3d(0, 0, 0);
@@ -70,11 +70,9 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[1]])};
         overflow: hidden;
         transform: perspective(100px)
-          translate3d(
-            0,
-            ${offsetheight - heights[rotatingindicies[1]] + 30}px,
-            -10px
-          );
+          translate3d(0,
+          ${offsetheight - heights[rotatingindicies[1]] + 30}px,
+          -10px);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 400)};
         z-index: 3;
         ${resetStyles()}
@@ -84,11 +82,9 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
         clip-path: ${calculateClip(offsetheight, heights[rotatingindicies[2]])};
         overflow: hidden;
         transform: perspective(100px)
-          translate3d(
-            0,
-            ${offsetheight - heights[rotatingindicies[2]] + 60}px,
-            -20px
-          );
+          translate3d(0,
+          ${offsetheight - heights[rotatingindicies[2]] + 60}px,
+          -20px);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 600)};
         z-index: 2;
         ${resetStyles()}
@@ -96,11 +92,9 @@ const StyledCardContainer = styled.ul<StyledCardContainerProps>`
       }
       &:nth-child(${rotatingindicies[3] + 1}) {
         transform: perspective(100px)
-          translate3d(
-            0,
-            ${offsetheight - heights[rotatingindicies[3]] + 90}px,
-            -30px
-          );
+          translate3d(0,
+          ${offsetheight - heights[rotatingindicies[3]] + 90}px,
+          -30px);
         transition: ${setTransition(DEFAULT_DURATION, DEFAULT_EASING, 800)};
         z-index: 1;
         ${resetStyles(0, 0)}

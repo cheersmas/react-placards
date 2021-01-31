@@ -1,11 +1,14 @@
 # React Placards
 
+<div>
+  <img src="./readme-assets/card.gif" />
+</div>
 <h2>Description</h2>
 
 - A placards component inspired from [Stripe](https://stripe.com)
 - ANNOUNCE your own Custom Components
 - Built with [Typescript](https://www.typescriptlang.org/)
-- Built with [Styled Components](https://www.styled-components.com/)
+- Styled with [Styled Components](https://www.styled-components.com/)
 
 <h2>Table of Contents</h2>
 

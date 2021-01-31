@@ -11,6 +11,7 @@
 #production
 /build
 yarn.lock
+/readme-assets
 
 #testing
 /coverage

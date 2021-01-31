@@ -20,7 +20,7 @@ function ReactNotification({
         width,
         overflow: 'hidden',
         boxSizing: 'border-box',
-        padding: '5%',
+        padding: 20,
         ...containerStyles
       }}
     >
