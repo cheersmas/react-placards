@@ -28,6 +28,7 @@
     "eslint": "eslint .",
     "rollup": "rimraf ./dist && rollup -c",
     "prepublishOnly": "npm run rollup",
+    "publish": "npm publish --access public",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint **/*.tsx",
     "prettier": "prettier --write .",
