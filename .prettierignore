@@ -12,7 +12,6 @@
 /build
 yarn.lock
 /readme-assets
-
 #testing
 /coverage
 .prettierignore
@@ -30,3 +29,4 @@ yarn-error.log*
 
 .vscode
 debug
+/.nojekyll
