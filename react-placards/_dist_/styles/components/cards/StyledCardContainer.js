@@ -1,4 +1,4 @@
-import styled, {css} from "../../../../_snowpack/pkg/styled-components.js";
+import styled, {css} from "../../../../../_snowpack/pkg/styled-components.js";
 import {
   calculateClip,
   DEFAULT_DURATION,

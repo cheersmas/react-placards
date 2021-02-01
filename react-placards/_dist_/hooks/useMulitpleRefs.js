@@ -1,4 +1,4 @@
-import {createRef, useEffect, useState} from "../../_snowpack/pkg/react.js";
+import {createRef, useEffect, useState} from "../../../_snowpack/pkg/react.js";
 const useMultipleRefs = (arrLength) => {
   const [elRefs, setElRefs] = useState([]);
   useEffect(() => {

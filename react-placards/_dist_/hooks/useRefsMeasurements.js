@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect, useState} from "../../_snowpack/pkg/react.js";
+import {useEffect, useLayoutEffect, useState} from "../../../_snowpack/pkg/react.js";
 import useMultipleRefs from "./useMulitpleRefs.js";
 function getRect(element) {
   let rect = {
