@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import codepenlogo from '../assets/codepen.svg';
-import githublogo from '../assets/github.svg';
-import likedinlogo from '../assets/linkedin.svg';
-import stackoverflowlogo from '../assets/stackoverflow.svg';
+import CodePen from '../assets/codepen';
+import Github from '../assets/github';
+import Linkedin from '../assets/linkedin';
+import StacOverflow from '../assets/stackoverflow';
 import type { Configuration } from '../types/Configuration.types';
 import Content, { ChangingBackground, MediaContent } from './Content';
 
@@ -163,23 +163,34 @@ export const configuration4: Configuration = {
   items: [
     {
       id: 'green',
-      content: <MediaContent imgSrc={codepenlogo} description="Codepen logo" />
+      content: (
+        <MediaContent description="Codepen logo">
+          <CodePen />
+        </MediaContent>
+      )
     },
     {
       id: 'red',
-      content: <MediaContent imgSrc={githublogo} description="Github Logo" />
+      content: (
+        <MediaContent description="Github Logo">
+          <Github />
+        </MediaContent>
+      )
     },
     {
       id: 'blue',
-      content: <MediaContent imgSrc={likedinlogo} description="Linkedin Logo" />
+      content: (
+        <MediaContent description="Linkedin Logo">
+          <Linkedin />
+        </MediaContent>
+      )
     },
     {
       id: 'yellow',
       content: (
-        <MediaContent
-          imgSrc={stackoverflowlogo}
-          description="Stackoverflow logo"
-        />
+        <MediaContent description="Stackoverflow logo">
+          <StacOverflow />
+        </MediaContent>
       )
     }
   ],
@@ -187,15 +198,18 @@ export const configuration4: Configuration = {
   height: 400,
   timing: 3000,
   cardStyles: {
-    borderRadius: '0',
+    borderRadius: '56px',
     padding: '0',
-    backgroundColor: 'none'
+    backgroundColor: 'none',
+    boxShadow: 'none'
   },
   stackCardStyles: {
     secondColor: '#b0521f',
     thirdColor: '#8c4018'
   },
-  containerStyles
+  containerStyles: {
+    padding: '0% 5% 0'
+  }
 };
 
 export default configuration;

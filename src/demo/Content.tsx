@@ -32,18 +32,18 @@ export const ChangingBackground: FC<ContentTypes> = ({
   </div>
 );
 
-export const MediaContent: FC<ContentTypes> = ({ imgSrc, description }) => (
+export const MediaContent: FC<ContentTypes> = ({ children }) => (
   <div
     style={{
       display: 'flex',
       alignItems: 'center',
       padding: 12,
+      borderRadius: '56px',
       background: '#fff',
       overflow: 'hidden'
     }}
   >
-    <img src={imgSrc} alt={description} height="32" />
-    <span style={{ paddingLeft: 12 }}>{description}</span>
+    {children}
   </div>
 );
 
