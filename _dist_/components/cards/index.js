@@ -1,4 +1,4 @@
-import React from "../../../../_snowpack/pkg/react.js";
+import React from "../../../_snowpack/pkg/react.js";
 import useRefsMeasurements from "../../hooks/useRefsMeasurements.js";
 import useTraversingArray from "../../hooks/useTraversingArray.js";
 import StyledCardContainer from "../../styles/components/cards/StyledCardContainer.js";

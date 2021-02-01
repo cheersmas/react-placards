@@ -1,4 +1,4 @@
-import {useEffect, useState} from "../../../_snowpack/pkg/react.js";
+import {useEffect, useState} from "../../_snowpack/pkg/react.js";
 import {requestInterval} from "../utils/helpers.js";
 const useTraversingArray = (array = [], width, duration = 5e3) => {
   const [initial, setInitial] = useState(true);

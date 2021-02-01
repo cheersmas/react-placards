@@ -1,4 +1,4 @@
-import React from "../../../_snowpack/pkg/react.js";
+import React from "../../_snowpack/pkg/react.js";
 import useGenerateArray from "../hooks/useGenerateArray.js";
 import Cards from "./cards/index.js";
 function ReactNotification({
