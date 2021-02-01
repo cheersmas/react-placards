@@ -1,8 +1,8 @@
 import React from "../../_snowpack/pkg/react.js";
-import codepenlogo from "../assets/codepen.svg.proxy.js";
-import githublogo from "../assets/github.svg.proxy.js";
-import likedinlogo from "../assets/linkedin.svg.proxy.js";
-import stackoverflowlogo from "../assets/stackoverflow.svg.proxy.js";
+import codepenlogo from "../assets/codepen.svg";
+import githublogo from "../assets/github.svg";
+import likedinlogo from "../assets/linkedin.svg";
+import stackoverflowlogo from "../assets/stackoverflow.svg";
 import Content, {ChangingBackground, MediaContent} from "./Content.js";
 const containerStyles = {padding: "10% 5%"};
 export const configuration = {
