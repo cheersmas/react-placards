@@ -1,6 +1,6 @@
 {
   "name": "react-placards",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A component inspired from stripe's placards",
   "homepage": "https://cheersmas.github.io/react-placards",
   "main": "dist/react-placards.js",
@@ -29,8 +29,6 @@
     "eslint": "eslint .",
     "deploy": "yarn build && gh-pages -d build",
     "rollup": "rimraf ./dist && rollup -c",
-    "prepublishOnly": "npm run rollup",
-    "publish": "npm publish --access public",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint **/*.tsx",
     "prettier": "prettier --write .",
