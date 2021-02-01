@@ -2,7 +2,7 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/react-placards/_dist_' }
+    src: { url: '/_dist_' }
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
