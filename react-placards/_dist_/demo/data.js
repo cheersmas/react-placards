@@ -1,4 +1,4 @@
-import React from "../../_snowpack/pkg/react.js";
+import React from "../../../_snowpack/pkg/react.js";
 import codepenlogo from "../assets/codepen.svg.proxy.js";
 import githublogo from "../assets/github.svg.proxy.js";
 import likedinlogo from "../assets/linkedin.svg.proxy.js";

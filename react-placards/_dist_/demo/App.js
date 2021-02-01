@@ -1,5 +1,5 @@
 import "./App.css.proxy.js";
-import React from "../../_snowpack/pkg/react.js";
+import React from "../../../_snowpack/pkg/react.js";
 import {Placards} from "../react-placards.js";
 import {
   configuration,

@@ -1,4 +1,4 @@
-import React from "../../_snowpack/pkg/react.js";
+import React from "../../../_snowpack/pkg/react.js";
 const Content = ({heading, date, description}) => /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("section", {
   className: "heading"
 }, /* @__PURE__ */ React.createElement("strong", null, heading), " ", /* @__PURE__ */ React.createElement("span", null, date)), /* @__PURE__ */ React.createElement("p", null, description));
