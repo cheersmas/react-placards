@@ -1,4 +1,4 @@
-import {useEffect, useState} from "../../../_snowpack/pkg/react.js";
+import {useEffect, useState} from "../../_snowpack/pkg/react.js";
 import {generateUniqueId} from "../utils/helpers.js";
 const useGenerateArrayWithIds = (array = [], width = 5) => {
   const [stateArray, setStateArray] = useState(array);

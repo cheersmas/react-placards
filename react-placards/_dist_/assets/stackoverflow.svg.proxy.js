@@ -1,1 +1,0 @@
-export default "/react-placards/_dist_/assets/stackoverflow.svg";
