@@ -2,7 +2,7 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/_dist_' }
+    src: { url: '/react-placards/_dist_' }
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
@@ -19,7 +19,6 @@ module.exports = {
     port: 3000
   },
   buildOptions: {
-    baseUrl: '/react-placards',
-    out: './build'
+    baseUrl: '/react-placards'
   }
 };
