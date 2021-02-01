@@ -11,19 +11,14 @@ export const ChangingBackground = ({
     padding: 20
   }
 }, /* @__PURE__ */ React.createElement("h2", null, description));
-export const MediaContent = ({imgSrc, description}) => /* @__PURE__ */ React.createElement("div", {
+export const MediaContent = ({children}) => /* @__PURE__ */ React.createElement("div", {
   style: {
     display: "flex",
     alignItems: "center",
     padding: 12,
+    borderRadius: "56px",
     background: "#fff",
     overflow: "hidden"
   }
-}, /* @__PURE__ */ React.createElement("img", {
-  src: imgSrc,
-  alt: description,
-  height: "32"
-}), /* @__PURE__ */ React.createElement("span", {
-  style: {paddingLeft: 12}
-}, description));
+}, children);
 export default Content;

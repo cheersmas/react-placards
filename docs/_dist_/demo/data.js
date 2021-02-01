@@ -1,8 +1,8 @@
 import React from "../../_snowpack/pkg/react.js";
-import codepenlogo from "../assets/codepen.svg";
-import githublogo from "../assets/github.svg";
-import likedinlogo from "../assets/linkedin.svg";
-import stackoverflowlogo from "../assets/stackoverflow.svg";
+import CodePen from "../assets/codepen.js";
+import Github from "../assets/github.js";
+import Linkedin from "../assets/linkedin.js";
+import StacOverflow from "../assets/stackoverflow.js";
 import Content, {ChangingBackground, MediaContent} from "./Content.js";
 const containerStyles = {padding: "10% 5%"};
 export const configuration = {
@@ -140,44 +140,43 @@ export const configuration4 = {
     {
       id: "green",
       content: /* @__PURE__ */ React.createElement(MediaContent, {
-        imgSrc: codepenlogo,
         description: "Codepen logo"
-      })
+      }, /* @__PURE__ */ React.createElement(CodePen, null))
     },
     {
       id: "red",
       content: /* @__PURE__ */ React.createElement(MediaContent, {
-        imgSrc: githublogo,
         description: "Github Logo"
-      })
+      }, /* @__PURE__ */ React.createElement(Github, null))
     },
     {
       id: "blue",
       content: /* @__PURE__ */ React.createElement(MediaContent, {
-        imgSrc: likedinlogo,
         description: "Linkedin Logo"
-      })
+      }, /* @__PURE__ */ React.createElement(Linkedin, null))
     },
     {
       id: "yellow",
       content: /* @__PURE__ */ React.createElement(MediaContent, {
-        imgSrc: stackoverflowlogo,
         description: "Stackoverflow logo"
-      })
+      }, /* @__PURE__ */ React.createElement(StacOverflow, null))
     }
   ],
   width: 400,
   height: 400,
   timing: 3e3,
   cardStyles: {
-    borderRadius: "0",
+    borderRadius: "56px",
     padding: "0",
-    backgroundColor: "none"
+    backgroundColor: "none",
+    boxShadow: "none"
   },
   stackCardStyles: {
     secondColor: "#b0521f",
     thirdColor: "#8c4018"
   },
-  containerStyles
+  containerStyles: {
+    padding: "0% 5% 0"
+  }
 };
 export default configuration;
