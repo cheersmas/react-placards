@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import type { Item } from '../types/components/Components.types';
+import { requestInterval } from '../utils/helpers';
 
 const useTraversingArray = (
   array: Item[] = [],
@@ -15,10 +16,7 @@ const useTraversingArray = (
   const end = (start + width - 1) % stateArray.length;
 
   const updateStart = () =>
-    requestAnimationFrame(() =>
-      setStart((prevStart) => (prevStart + 1) % stateArray.length)
-    );
-
+    setStart((prevStart) => (prevStart + 1) % stateArray.length);
   // effect to generate array if array.length < width
   useEffect(() => {
     const stateArrayLength = stateArray.length;
@@ -33,12 +31,12 @@ const useTraversingArray = (
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const handle = requestInterval(() => {
       updateStart();
       setInitial(false);
     }, duration);
-    return () => clearInterval(timer);
-  });
+    return () => cancelAnimationFrame(handle);
+  }, [stateArray]);
 
   if (start < end) {
     return {

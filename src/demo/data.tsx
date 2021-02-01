@@ -145,7 +145,7 @@ export const configuration3: Configuration = {
   ],
   width: 400,
   height: 400,
-  timing: 2000,
+  timing: 5000,
   cardStyles: {
     borderRadius: '0',
     padding: '0',
